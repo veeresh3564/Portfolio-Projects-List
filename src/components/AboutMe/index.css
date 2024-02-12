@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #616e7c;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paragraph {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 20px;
+}
+.heading {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: bold;
+  color: #3e4c59;
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.about-pic {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.about-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.details-container {
+  border: 2px solid #81d58f;
+  margin: 5% 10% 0 10%;
+  padding: 10px;
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  text-align: center;
+}
+.details-container {
+  animation: color-change 2s linear infinite;
+}
+
+@keyframes color-change {
+  0%,
+  100% {
+    border-color: #ff1493;
+  }
+
+  25% {
+    border-color: #8b4513;
+  }
+
+  50% {
+    border-color: #0091ea;
+  }
+
+  75% {
+    border-color: #9400d3;
+  }
+}
+.details-container h3 {
+  font-size: 15px;
+  text-align: center;
+  color: #3e4c59;
+}
+
+.details-container p {
+  font-size: 13px;
+}
+.text-container {
+  margin-left: 10%;
+  font-family: sans-serif;
+  color: #616e7c;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.nxt {
+  background: linear-gradient(to right, #16d6d9, #96cc29);
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 20px;
+  animation: animate 0.5s linear infinite;
+  vertical-align: super;
+}
+
+.nxt {
+  animation-name: nxt;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.vertical-align-top {
+  vertical-align: super;
+}
+
+@keyframes nxt {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .main-container {
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .about-pic {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+  }
+  .about-containers {
+    flex-direction: column;
+    margin: 0 0 5% 0;
+    margin-right: 10%;
+  }
+  .details-container {
+    width: 200px;
+    height: auto;
+  }
+  .text-container {
+    text-align: start;
+  }
+}
